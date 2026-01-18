@@ -69,6 +69,7 @@ body {
   color: var(--text);
   line-height: var(--line);
   font-size: 15px;
+  position: relative;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -111,6 +112,53 @@ h3 {
 
 h4 {
   font-size: 1rem;
+}
+
+/* ============================================
+   NETWORK WEB BACKGROUND
+   ============================================ */
+
+/* SVG network pattern with connected nodes */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: var(--bg);
+  background-image: url('../img/network-bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+  animation: networkPulse 15s ease-in-out infinite;
+}
+
+@keyframes networkPulse {
+  0%, 100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+    opacity: 0.35;
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  body::before {
+    background-size: 150% auto;
+    opacity: 0.25;
+  }
 }
 
 /* ============================================
@@ -201,30 +249,34 @@ h4 {
 }
 
 .nav-toggle-icon {
-  display: inline-block;
-  width: 14px;
-  height: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 16px;
   margin-left: 8px;
-  position: relative;
 }
 
-.nav-toggle-icon::before,
-.nav-toggle-icon::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
+.nav-toggle-icon span {
+  display: block;
+  width: 100%;
   height: 2px;
   background: currentColor;
   border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-.nav-toggle-icon::before {
-  top: 0;
+/* Hamburger transforms to X when open */
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
 }
 
-.nav-toggle-icon::after {
-  bottom: 0;
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .nav-menu {
