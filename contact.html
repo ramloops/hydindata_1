@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="assets/css/style.css">
   <script defer src="assets/js/script.js"></script>
 </head>
@@ -26,28 +25,7 @@
         <path d="M8 10h8M8 14h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </a>
-    <a href="/cdn-cgi/l/email-protection#0f666169604f67766b66616b6e7b6e216c6062" class="floating-btn floating-email" aria-label="Email us at info@hydindata.com" title="Email: info@hydindata.com">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
-  </div>
-
-  <!-- Floating Contact CTAs -->
-
-  <header class="site-header" data-header>
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <!-- Floating Contact CTAs -->
-  <div class="floating-cta">
-    <a href="sms:+16173964012" class="floating-btn floating-sms" aria-label="Text us at 617-396-4012" title="Text: (617) 396-4012">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M8 10h8M8 14h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
-    <a href="/cdn-cgi/l/email-protection#2c45424a436c4455484542484d584d024f4341" class="floating-btn floating-email" aria-label="Email us at info@hydindata.com" title="Email: info@hydindata.com">
+    <a href="mailto:info@hydindata.com" class="floating-btn floating-email" aria-label="Email us at info@hydindata.com" title="Email: info@hydindata.com">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -63,9 +41,13 @@
       </a>
 
       <nav class="site-nav">
-        <button class="nav-toggle" data-nav-toggle aria-expanded="false">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false">
           <span class="nav-toggle-label">Menu</span>
-          <span class="nav-toggle-icon"></span>
+          <span class="nav-toggle-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
         </button>
         <div class="nav-menu" data-nav-menu>
           <a href="services.html">Services</a>
@@ -94,7 +76,7 @@
             <p class="muted">Pick the channel that is easiest for you.</p>
 
             <div class="stack">
-              <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#462e232a2a29062e3f222f28222732276825292b793533242c2325327b1634292c2325326374760f2837332f343f602429223f7b0e2f6374760e3f222f28222732276374056376076376070f630374637e76637f7f2b6374762f2832233423353223226374762f286375076376076376070129272a637507637476637607122f2b232a2f28236375076374766376070433222123326374763427282123637507637476637607637607122e27282d35637405">Email Hydindata</a>
+              <a class="btn btn-primary" href="mailto:info@hydindata.com">Email Hydindata</a>
 
               <button class="btn btn-ghost" type="button" data-sms-btn>
                 Text a default message
@@ -125,3 +107,39 @@ Notes:</code></pre>
             </div>
           </section>
         </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="assets/img/logo.svg" alt="" width="24" height="24">
+          <span>Hydindata</span>
+        </div>
+        <p class="footer-note">AI-powered websites, landing pages, and intelligent tools.</p>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-title">Pages</h2>
+        <ul class="footer-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-title">Contact</h2>
+        <ul class="footer-links">
+          <li><a href="mailto:info@hydindata.com">info@hydindata.com</a></li>
+          <li><a href="tel:+16173964012">(617) 396-4012</a></li>
+          <li><a href="contact.html">Start a project</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span data-year></span> Hydindata. All rights reserved.</p>
+    </div>
+  </footer>

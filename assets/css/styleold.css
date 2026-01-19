@@ -65,6 +65,7 @@ body {
   /* Professional sans-serif font stack - Inter primary */
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro', 'Segoe UI', 
                'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
   color: var(--text);
   line-height: var(--line);
   font-size: 15px;
@@ -478,6 +479,7 @@ body::before {
 .page-hero {
   padding-top: 80px;
   padding-bottom: 48px;
+  background: linear-gradient(180deg, var(--bg-subtle) 0%, var(--bg) 100%);
 }
 
 .section-head {
@@ -630,6 +632,7 @@ body::before {
 }
 
 .cta-band {
+  background: linear-gradient(180deg, var(--bg-subtle) 0%, var(--bg) 100%);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 64px 0;
@@ -656,6 +659,7 @@ body::before {
   border-top: 1px solid var(--border);
   padding-top: 48px;
   padding-bottom: 32px;
+  background: var(--bg-subtle);
   margin-top: 64px;
 }
 
@@ -985,6 +989,7 @@ body::before {
    WORK PREVIEW CAROUSEL
    ============================================ */
 .work-preview {
+  background: var(--bg-subtle);
 }
 
 .carousel-container {
