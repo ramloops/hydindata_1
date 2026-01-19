@@ -155,7 +155,7 @@ body::before {
 /* Mobile optimization */
 @media (max-width: 768px) {
   body::before {
-    background-size: 150% auto;
+    background-size: 250% auto;
     opacity: 0.25;
   }
 }
